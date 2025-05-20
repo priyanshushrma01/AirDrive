@@ -1,6 +1,6 @@
-# Droply - Step by Step Guide
+# AirDrive - Step by Step Guide
 
-This guide will walk you through recreating the Droply project, a file storage application built with Next.js, Clerk, Neon PostgreSQL, Drizzle ORM, and HeroUI.
+This guide will walk you through recreating the AirDrive project, a file storage application built with Next.js, Clerk, Neon PostgreSQL, Drizzle ORM, and HeroUI.
 
 ## Prerequisites
 
@@ -16,8 +16,8 @@ Before starting, make sure you have the following:
 1. Create a new Next.js project:
 
 ```bash
-npx create-next-app@latest droply
-cd droply
+npx create-next-app@latest AirDrive
+cd AirDrive
 ```
 
 2. When prompted, choose the following options:
@@ -119,9 +119,9 @@ export default {
 
 ```typescript
 /**
- * Database Schema for Droply
+ * Database Schema for AirDrive
  *
- * This file defines the database structure for our Droply application.
+ * This file defines the database structure for our AirDrive application.
  * We're using Drizzle ORM with PostgreSQL (via Neon) for our database.
  */
 
@@ -138,7 +138,7 @@ import { relations } from "drizzle-orm";
 /**
  * Files Table
  *
- * This table stores all files and folders in our Droply.
+ * This table stores all files and folders in our AirDrive.
  * - Both files and folders are stored in the same table
  * - Folders are identified by the isFolder flag
  * - Files/folders can be nested using the parentId (creating a tree structure)
@@ -323,7 +323,7 @@ export default function Providers({ children }: ProvidersProps) {
         >
           <ToastProvider>
             <VisuallyHidden>
-              <h1>Droply - Simple File Storage</h1>
+              <h1>AirDrive - Simple File Storage</h1>
             </VisuallyHidden>
             {children}
           </ToastProvider>
@@ -342,7 +342,7 @@ import type { Metadata } from "next";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
-  title: "Droply - Simple File Storage",
+  title: "AirDrive - Simple File Storage",
   description: "A simple file storage application",
 };
 
